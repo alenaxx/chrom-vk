@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "chrome-player",
+  "version": "0.0.1",
+  "background": {
+    "scripts": [
+      "command.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.vk.com/*"
+      ],
+      "js": [
+        "change.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "commands": {
+    "nextTrack": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q"
+      },
+      "description": "nextTrack",
+      "global": true
+    },
+    "prevTrack": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+W"
+      },
+      "description": "prevTrack",
+      "global": true
+    }
+  
+    }
+  }
