@@ -1,4 +1,4 @@
-console.log('chrom-vk 0.0.1');
+console.log('chrome-vk 0.0.1');
 
 changeTrack = (command) => {
     switch (command) {
@@ -11,6 +11,13 @@ changeTrack = (command) => {
             }
             break;
         case "prevTrack": document.getElementsByClassName("top_audio_player_prev")[0].click();
+            break;
+        case "changeAudioTime":
+            let script = document.createElement("script");
+
+            script.innerHTML = "window.getAudioPlayer()._impl._currentAudioEl.currentTime = window.getAudioPlayer()._impl._currentAudioEl.currentTime + 25;";
+
+            document.body.appendChild(script);
             break;
     }
 };

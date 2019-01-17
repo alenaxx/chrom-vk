@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "chrome-player",
+  "name": "chrome-vk",
   "version": "0.0.1",
   "background": {
     "scripts": [
@@ -35,7 +35,13 @@
       },
       "description": "prevTrack",
       "global": true
+    },
+    "changeAudioTime": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "rewind for 25 seconds",
+      "global": true
     }
-  
-    }
-  }
+
+}
