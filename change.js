@@ -1,6 +1,6 @@
 console.log('chrome-vk 0.0.1');
 
-changeTrack = (command) => {
+change = (command) => {
     switch (command) {
         case "nextTrack":
             if (!document.getElementsByClassName("top_audio_player_enabled")[0]) {
@@ -24,6 +24,6 @@ changeTrack = (command) => {
 
 chrome.runtime.onMessage.addListener((request) => {
     if (request.command) {
-        changeTrack(request.command);
+        change(request.command);
     }
 });

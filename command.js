@@ -3,7 +3,7 @@ sendMessage = (tabInfo, command) => {chrome.tabs.query(tabInfo, (tabs) => {
     });
 };
 
-changeTrack = (command) => {
+change = (command) => {
     if (command == "nextTrack"
         || command == "prevTrack"
         || command == "changeAudioTime")
